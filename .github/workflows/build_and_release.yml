@@ -8,7 +8,7 @@ on:
 
 jobs:
   release:
-    uses: taylorludwig/openchami-github-actions/.github/workflows/go-build-release.yml@feature/shared-workflow
+    uses: taylorludwig/openchami-github-actions/workflows/go-build-release.yml@feature/shared-workflow
     with:
       cgo-enabled: "0"
       pre-build-commands: |
