@@ -1,6 +1,6 @@
 
 version: 2.4
-project_name: cloud-init
+project_name: openchami-cloud-init
 before:
   hooks:
     # You may remove this if you don't use go modules.
