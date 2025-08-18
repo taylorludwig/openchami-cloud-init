@@ -1,0 +1,17 @@
+name: Release with goreleaser
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+    uses: taylorludwig/openchami-github-actions/.github/workflows/go-build-release.yml@feature/shared-workflow
+    with:
+      cgo-enabled: "0"
+      pre-build-commands: |
+        go install github.com/swaggo/swag/cmd/swag@latest
+      attestation-binary-path: "dist/cloud-init*"
+      registry-name: ghcr.io/taylorludwig/openchami-cloud-init
