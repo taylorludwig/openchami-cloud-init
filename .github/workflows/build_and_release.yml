@@ -2,13 +2,14 @@ name: Release with goreleaser
 
 on:
   workflow_dispatch:
+  pull_request:
   push:
     tags:
       - v*
 
 jobs:
   release:
-    uses: taylorludwig/openchami-github-actions/workflows/go-build-release.yml@feature/shared-workflow
+    uses: taylorludwig/openchami-github-actions/.github/workflows/go-build-release.yml@feature/snapshot-builds
     with:
       cgo-enabled: "0"
       pre-build-commands: |
