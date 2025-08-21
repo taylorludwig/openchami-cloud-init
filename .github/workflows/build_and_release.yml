@@ -1,5 +1,6 @@
 name: Release with goreleaser
 
+# testing a change to pr
 on:
   workflow_dispatch:
   pull_request:
